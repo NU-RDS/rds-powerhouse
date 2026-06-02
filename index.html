@@ -3,518 +3,428 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta name="description" content="Robot Design Studio capstone project page for the Powerhouse robotic finger at Northwestern University.">
+  <!-- TODO: Replace with your final author/team attribution -->
+  <meta name="author" content="Team Powerhouse | Cole Abbott, Heinrich Asbury, Jared Berry, Evan Bulatek, and Benji Sobeloff-Gittes">
+  <title>Robot Design Studio | Powerhouse Finger</title>
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <link rel="icon" type="image/x-icon" href="static/images/emoji-muscle.ico">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
 </head>
 <body>
-
-
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+  <button class="scroll-to-top" onclick="scrollToTop()" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
+  <header class="hero hero-main">
+    <div class="hero-body">
+      <div class="container is-max-desktop has-text-centered">
+        <!-- TODO: Update course/institution line if needed -->
+        <p class="kicker">Northwestern University | MECH_ENG 472</p>
+        <!-- TODO: Update project title if needed -->
+        <h1 class="title project-title">Robot Design Studio: Powerhouse Finger</h1>
+        <p class="subtitle project-authors">Cole Abbott, Heinrich Asbury, Jared Berry, Evan Bulatek, Benji Sobeloff-Gittes</p>
+        <!-- TODO: Refine hero subtitle copy for final publication -->
+        <p class="subtitle project-subtitle">
+          A tendon-driven robotic finger optimized for strength and durability while preserving speed, range of motion, and functional dexterity.
+        </p>
       </div>
     </div>
-  </div>
+  </header>
 
-  <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
+  <section class="section banner-section">
+    <div class="container is-max-desktop">
+      <!-- TODO: Replace banner video if you want a different hero clip -->
+      <video class="banner-video" autoplay muted loop playsinline preload="metadata" aria-label="Pencil break demonstration video">
+        <source src="static/videos/pencil_break.mp4" type="video/mp4">
       </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
     </div>
-  </div>
-</section>
-<!-- End teaser video -->
+  </section>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="section-title">Project Summary</h2>
+      <!-- TODO: Replace with your final summary paragraph(s) -->
+      <p>
+        Our capstone team designed and validated a 3-DOF robotic finger focused on high force output without sacrificing practical performance. 
+        The final system combines antagonistic tendon routing, coupled finger kinematics, custom pulleys and encoders, and a modular testbed to support robust bench testing and iterative prototyping.
+      </p>
+      <p>
+        In software and firmware, we built a full stack spanning simulation, controls, teleoperation, and safety-limited embedded motor control. 
+        The resulting platform demonstrates repeatable high-load behavior and provides a strong base for future sensing and manipulation tasks.
+      </p>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+  <section class="section section-alt">
+    <div class="container is-max-desktop">
+      <h2 class="section-title">Design Specs vs Actual</h2>
+      <div class="table-wrapper">
+        <table class="table is-fullwidth is-striped spec-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Designed / Goal Performance</th>
+              <th>Actual Performance</th>
+            </tr>
+          </thead>
+          <!-- TODO: Fill in all designed/goal and actual values below -->
+          <tbody>
+            <tr>
+              <td>Maximum Output Force at Fingertip (N)</td>
+              <td>TODO</td>
+              <td>TODO</td>
+            </tr>
+            <tr>
+              <td>Actuation Speed (RPM)</td>
+              <td>TODO</td>
+              <td>TODO</td>
+            </tr>
+            <tr>
+              <td>MCP Range of Motion (deg)</td>
+              <td>TODO</td>
+              <td>TODO</td>
+            </tr>
+            <tr>
+              <td>PIP Range of Motion (deg)</td>
+              <td>TODO</td>
+              <td>TODO</td>
+            </tr>
+            <tr>
+              <td>DIP Range of Motion (deg)</td>
+              <td>TODO</td>
+              <td>TODO</td>
+            </tr>
+            <tr>
+              <td>Splay Range (deg)</td>
+              <td>TODO</td>
+              <td>TODO</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
-<!--End paper poster -->
 
+  <section class="section" id="hardware">
+    <div class="container is-max-desktop">
+      <h2 class="section-title">Hardware Description</h2>
 
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+      <div class="carousel hardware-carousel">
+        <div class="item">
+          <!-- TODO: Replace placeholder with finger_on_testbed.png when added to static/images -->
+          <img src="static/images/placeholder.png" alt="Finger mounted on testbed" loading="lazy">
+          <!-- TODO: Update caption text if desired -->
+          <p class="caption">Finger mounted on custom modular testbed.</p>
+        </div>
+        <div class="item">
+          <!-- TODO: Replace placeholder with finger_profile.png when added to static/images -->
+          <img src="static/images/placeholder.png" alt="Finger side profile" loading="lazy">
+          <!-- TODO: Update caption text if desired -->
+          <p class="caption">Side profile view showing tendon-driven architecture.</p>
+        </div>
+        <div class="item">
+          <!-- TODO: Replace placeholder with finger_design_iter.png when added to static/images -->
+          <img src="static/images/placeholder.png" alt="Design iterations of finger" loading="lazy">
+          <!-- TODO: Update caption text if desired -->
+          <p class="caption">Design iterations used to improve force and durability.</p>
         </div>
       </div>
+
+      <figure class="single-media">
+        <!-- TODO: Replace placeholder with routing_diagram.png when added to static/images -->
+        <img src="static/images/placeholder.png" alt="Tendon routing diagram" loading="lazy">
+        <!-- TODO: Update caption text if desired -->
+        <figcaption>Tendon routing and coupling architecture.</figcaption>
+      </figure>
+
+      <div class="columns">
+        <div class="column is-two-thirds">
+          <p>
+            The hardware stack centers on robust tendon routing and modular construction so we can iterate quickly while maintaining high force output and repeatable performance.
+          </p>
+          <!-- TODO: Edit hardware bullet list with your final wording/details -->
+          <ul class="feature-list">
+            <li>3-DOF finger with splay and flexion/extension.</li>
+            <li>PIP and DIP joints are mechanically coupled with an approximately linear relationship.</li>
+            <li>N+1 actuation: two differential tendons for antagonistic splay and strong flexion, one tendon for MCP flexion and PIP/DIP extension, one tendon for MCP extension.</li>
+            <li>Double-groove pulleys at each joint prevent tendon slacking without idler pulleys.</li>
+            <li>Parallel tensioning springs reduce slack and simplify assembly.</li>
+            <li>Knot tendon terminations on shafts for compact routing.</li>
+            <li>Z-stack construction supports faster prototyping, assembly, and part swaps.</li>
+            <li>Custom modular testbed includes finger and motor mounts plus pulley stand.</li>
+            <li>Custom off-axis joint encoders provide absolute position sensing.</li>
+            <li>Many components were manufactured in-house: pulleys, shafts, finger frames, and mounts.</li>
+            <li>Modular fingertip includes compliant contact surface and future tactile sensor mounting support.</li>
+          </ul>
+        </div>
+        <div class="column is-one-third">
+          <h3 class="mini-title">Motor Specs</h3>
+          <div class="table-wrapper">
+            <table class="table is-fullwidth is-narrow motor-table">
+              <thead>
+                <tr>
+                  <th>Motor</th>
+                  <th>Spec</th>
+                </tr>
+              </thead>
+              <!-- TODO: Fill in motor specifications -->
+              <tbody>
+                <tr><td>Continuous Torque (Nm)</td><td>TODO</td></tr>
+                <tr><td>Stall Torque (Nm)</td><td>TODO</td></tr>
+                <tr><td>Max Speed (RPM)</td><td>TODO</td></tr>
+                <tr><td>Efficiency</td><td>TODO</td></tr>
+                <tr><td>Operating Voltage (V)</td><td>TODO</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="media-grid">
+        <figure>
+          <!-- TODO: Replace placeholder with finger_closeup.png when added to static/images -->
+          <img src="static/images/placeholder.png" alt="Finger closeup" loading="lazy">
+          <!-- TODO: Update caption text if desired -->
+          <figcaption>Finger closeup</figcaption>
+        </figure>
+        <figure>
+          <!-- TODO: Replace placeholder with finger_cad.png when added to static/images -->
+          <img src="static/images/placeholder.png" alt="Finger CAD" loading="lazy">
+          <!-- TODO: Update caption text if desired -->
+          <figcaption>CAD model</figcaption>
+        </figure>
+        <figure>
+          <!-- TODO: Replace placeholder with finger_components.png when added to static/images -->
+          <img src="static/images/placeholder.png" alt="Finger components" loading="lazy">
+          <!-- TODO: Update caption text if desired -->
+          <figcaption>Manufactured components</figcaption>
+        </figure>
+        <figure>
+          <!-- TODO: Replace placeholder with cad_exploded.png when added to static/images -->
+          <img src="static/images/placeholder.png" alt="Exploded CAD view" loading="lazy">
+          <!-- TODO: Update caption text if desired -->
+          <figcaption>Exploded assembly view</figcaption>
+        </figure>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <section class="section section-alt" id="software">
+    <div class="container is-max-desktop">
+      <h2 class="section-title">Software Description</h2>
 
-    <!-- End of Statcounter Code -->
+      <h3 class="subsection-title">Firmware and Control Systems</h3>
+      <p>
+        The firmware and control architecture prioritizes safe torque delivery, reliable sensing, and flexible control interfaces for both bench testing and teleoperation.
+      </p>
+      <!-- TODO: Edit firmware/control bullet list with your final wording/details -->
+      <ul class="feature-list">
+        <li>Full firmware stack for encoder readout and motor driving.</li>
+        <li>Torque and current safety limits with soft-start behavior for safer startup.</li>
+        <li>Closed-loop joint feedback controller plus specialized value printing for plotting.</li>
+        <li>Torque-control mode teleoperation interface.</li>
+        <li>Rigorous manual validation performed across all controller types.</li>
+      </ul>
 
-  </body>
-  </html>
+      <div class="columns is-variable is-4">
+        <div class="column">
+          <!-- TODO: Replace video/caption if needed -->
+          <video controls muted loop playsinline preload="metadata" class="detail-video" aria-label="Finger bend test video">
+            <source src="static/videos/finger_bend.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Controlled bend sequence under closed-loop operation.</p>
+        </div>
+        <div class="column">
+          <!-- TODO: Replace video/caption if needed -->
+          <video controls muted loop playsinline preload="metadata" class="detail-video" aria-label="Torque teleoperation video">
+            <source src="static/videos/torque_teleop.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Torque-control teleoperation interface in use.</p>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Simulation</h3>
+      <p>
+        The simulation toolchain mirrors the physical system, enabling validation of tendon dynamics, inverse kinematics, and controller performance before hardware deployment.
+      </p>
+      <div class="carousel simulation-carousel">
+        <div class="item">
+          <!-- TODO: Replace video/caption if needed -->
+          <video controls muted loop playsinline preload="metadata" aria-label="Catapult demo video">
+            <source src="static/videos/demo_catapult.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Demo 1: Catapult-style high-force release.</p>
+        </div>
+        <div class="item">
+          <!-- TODO: Replace video/caption if needed -->
+          <video controls muted loop playsinline preload="metadata" aria-label="Weight demo video">
+            <source src="static/videos/demo_weight.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Demo 2: Weighted load interaction.</p>
+        </div>
+        <div class="item">
+          <!-- TODO: Replace video/caption if needed -->
+          <video controls muted loop playsinline preload="metadata" aria-label="Tendon tension simulation video">
+            <source src="static/videos/demo_tendon_tension.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Demo 3: Tendon tension behavior and force-sharing.</p>
+        </div>
+        <div class="item">
+          <!-- TODO: Replace video/caption if needed -->
+          <video controls muted loop playsinline preload="metadata" aria-label="IK tracking simulation video">
+            <source src="static/videos/sim_ik_tracking.mp4" type="video/mp4">
+          </video>
+          <p class="caption">Demo 4: Fingertip trajectory tracking with IK.</p>
+        </div>
+      </div>
+
+      <!-- TODO: Edit simulation/software bullet list with your final wording/details -->
+      <ul class="feature-list">
+        <li>Onshape assembly parsing into URDF, with Blender-based visualization in Drake and rviz2.</li>
+        <li>C++ and Eigen control library fingerlib with tendon tension solver, IK, and geometry constants.</li>
+        <li>Drake simulation integrated with ROS2 and simulated motors plus tendons.</li>
+        <li>Three control modes: joint torque, joint position, and fingertip position.</li>
+        <li>ROS2 wrapper nodes for fingerlib functions and visualization.</li>
+        <li>Workspace and Jacobian generation scripts for broad joint-state sweeps.</li>
+        <li>Trajectory tracking tools and plotting for torques, tensions, joint states, and fingertip states.</li>
+        <li>Full fingerlib test suite and robust initialization error handling.</li>
+      </ul>
+
+      <p class="repo-link-wrap">
+        <!-- TODO: Update software repository link if it changes -->
+        Software repository:
+        <a href="https://github.com/jarmibe7/rds-powerhouse-software" target="_blank" rel="noopener noreferrer">https://github.com/jarmibe7/rds-powerhouse-software</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="tests">
+    <div class="container is-max-desktop">
+      <h2 class="section-title">Test Results</h2>
+      <!-- TODO: Update test summary text with your final validation narrative -->
+      <p>
+        The validation campaign included impedance response tests, force step tests, and power-focused load tests to verify controller behavior, force capacity, and repeatability against project requirements.
+      </p>
+
+      <div class="table-wrapper">
+        <table class="table is-fullwidth is-striped spec-table">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Test Goal</th>
+              <th>Spec</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <!-- TODO: Fill in test specs and results -->
+          <tbody>
+            <tr>
+              <td>Impedance Characterization</td>
+              <td>Validate stable compliant behavior across commanded settings.</td>
+              <td>TODO</td>
+              <td>TODO</td>
+            </tr>
+            <tr>
+              <td>Force Step Response</td>
+              <td>Measure settling time and overshoot under force step commands.</td>
+              <td>TODO</td>
+              <td>TODO</td>
+            </tr>
+            <tr>
+              <td>Power Test</td>
+              <td>Evaluate sustained high-load operation and thermal limits.</td>
+              <td>TODO</td>
+              <td>TODO</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="media-grid test-grid">
+        <figure>
+          <!-- TODO: Replace placeholder with impedance_plots.png when added to static/images -->
+          <img src="static/images/placeholder.png" alt="Impedance plots" loading="lazy">
+          <!-- TODO: Update caption text if desired -->
+          <figcaption>Impedance plots</figcaption>
+        </figure>
+        <figure>
+          <!-- TODO: Replace placeholder with force_step.png when added to static/images -->
+          <img src="static/images/placeholder.png" alt="Force step response" loading="lazy">
+          <!-- TODO: Update caption text if desired -->
+          <figcaption>Force step response</figcaption>
+        </figure>
+        <figure>
+          <!-- TODO: Replace placeholder with power_test.png when added to static/images -->
+          <img src="static/images/placeholder.png" alt="Power test" loading="lazy">
+          <!-- TODO: Update caption text if desired -->
+          <figcaption>Power test</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="bom">
+    <div class="container is-max-desktop">
+      <h2 class="section-title">Bill of Materials and Finger Cost</h2>
+      <div class="table-wrapper">
+        <table class="table is-fullwidth is-striped spec-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Category</th>
+              <th>Qty</th>
+              <th>Unit Cost (USD)</th>
+              <th>Total Cost (USD)</th>
+              <th>Supplier / Notes</th>
+            </tr>
+          </thead>
+          <!-- TODO: Fill in BOM items, quantities, and costs -->
+          <tbody>
+            <tr><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
+            <tr><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
+            <tr><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
+            <tr><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="team">
+    <div class="container is-max-desktop">
+      <h2 class="section-title">Team Photo and Acknowledgements</h2>
+      <figure class="single-media team-photo">
+        <!-- TODO: Replace placeholder with team_photo.png when added to static/images -->
+        <img src="static/images/placeholder.png" alt="Robot Design Studio capstone team photo" loading="lazy">
+      </figure>
+
+      <!-- TODO: Replace acknowledgements text with your final version -->
+      <p>
+        Thank you to Dr. Colgate, Raphael, and Sairam Umakanth for their guidance throughout the entire design process. 
+        We also thank shop faculty, guest reviewers, andTony Shilati for assisting us with designn, manufacturing, and testing out of their own personal time.
+        Lastly, thank you to our peers in RDS for their helpful feedback and support along the way.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <!-- TODO: Update footer text if desired -->
+      <p>Robot Design Studio capstone project page.</p>
+    </div>
+  </footer>
+</body>
+</html>
