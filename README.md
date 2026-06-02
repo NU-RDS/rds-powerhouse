@@ -15,6 +15,10 @@ How to use:
     * Anything ending in `.css`
     * Anyting ending in `.js`
 
+To view the actual page, go to: [https://jarmibe7.github.io/rds-powerhouse-website/
+](https://jarmibe7.github.io/rds-powerhouse-website/
+)
+
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
 
