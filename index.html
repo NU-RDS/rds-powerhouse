@@ -176,8 +176,8 @@
             <table class="table is-fullwidth is-narrow motor-table">
               <thead>
                 <tr>
-                  <th>Motor</th>
                   <th>Spec</th>
+                  <th>Value</th>
                 </tr>
               </thead>
               <!-- TODO: Fill in motor specifications -->
@@ -280,7 +280,7 @@
           <video controls muted loop playsinline preload="metadata" aria-label="Tendon tension simulation video">
             <source src="static/videos/demo_tendon_tension.mp4" type="video/mp4">
           </video>
-          <p class="caption">Demo 3: Tendon tension behavior and force-sharing.</p>
+          <p class="caption">Demo 3: Fully simulated tendon tension behavior and force-sharing.</p>
         </div>
         <div class="item">
           <!-- TODO: Replace video/caption if needed -->
@@ -293,7 +293,7 @@
 
       <!-- TODO: Edit simulation/software bullet list with your final wording/details -->
       <ul class="feature-list">
-        <li>Onshape assembly parsing into URDF, with Blender-based visualization in Drake and rviz2.</li>
+        <li>Onshape assembly parsing into URDF using Blender, for collision and visualization in Drake and rviz2.</li>
         <li>C++ and Eigen control library fingerlib with tendon tension solver, IK, and geometry constants.</li>
         <li>Drake simulation integrated with ROS2 and simulated motors plus tendons.</li>
         <li>Three control modes: joint torque, joint position, and fingertip position.</li>
@@ -316,7 +316,7 @@
       <h2 class="section-title">Test Results</h2>
       <!-- TODO: Update test summary text with your final validation narrative -->
       <p>
-        The validation campaign included impedance response tests, force step tests, and power-focused load tests to verify controller behavior, force capacity, and repeatability against project requirements.
+        The validation process included impedance response tests, force step tests, and power-focused load tests to verify controller behavior, force capacity, and repeatability against project requirements.
       </p>
 
       <div class="table-wrapper">
@@ -331,6 +331,12 @@
           </thead>
           <!-- TODO: Fill in test specs and results -->
           <tbody>
+            <tr>
+              <td>Max. Fingertip Force</td>
+              <td>Apply high forces to the environment.</td>
+              <td>TODO</td>
+              <td>TODO</td>
+            </tr>
             <tr>
               <td>Impedance Characterization</td>
               <td>Validate stable compliant behavior across commanded settings.</td>
