@@ -58,7 +58,7 @@
       <h2 class="section-title">Project Summary</h2>
       <!-- TODO: Replace with your final summary paragraph(s) -->
       <p>
-        Our capstone team designed and validated a 3-DOF robotic finger focused on high force output without sacrificing practical performance. 
+        Our capstone team designed a 3-DOF robotic finger focusing on high strength and durability, all without sacrificing practical performance. 
         The final system combines antagonistic tendon routing, coupled finger kinematics, custom pulleys and encoders, and a modular testbed to support robust bench testing and iterative prototyping.
       </p>
       <p>
@@ -84,7 +84,7 @@
           <tbody>
             <tr>
               <td>Maximum Output Force at Fingertip (N)</td>
-              <td>TODO</td>
+              <td>40</td>
               <td>TODO</td>
             </tr>
             <tr>
@@ -94,23 +94,23 @@
             </tr>
             <tr>
               <td>MCP Range of Motion (deg)</td>
-              <td>TODO</td>
-              <td>TODO</td>
+              <td>90</td>
+              <td>110</td>
             </tr>
             <tr>
               <td>PIP Range of Motion (deg)</td>
-              <td>TODO</td>
-              <td>TODO</td>
+              <td>90</td>
+              <td>110</td>
             </tr>
             <tr>
               <td>DIP Range of Motion (deg)</td>
-              <td>TODO</td>
-              <td>TODO</td>
+              <td>90</td>
+              <td>90</td>
             </tr>
             <tr>
               <td>Splay Range (deg)</td>
-              <td>TODO</td>
-              <td>TODO</td>
+              <td>+/- 10</td>
+              <td>+/- 20</td>
             </tr>
           </tbody>
         </table>
@@ -124,22 +124,40 @@
 
       <div class="carousel hardware-carousel">
         <div class="item">
-          <!-- TODO: Replace placeholder with finger_on_testbed.png when added to static/images -->
-          <img src="static/images/placeholder.png" alt="Finger mounted on testbed" loading="lazy">
-          <!-- TODO: Update caption text if desired -->
+          <img src="static/images/wide_view.jpeg" alt="Finger mounted on testbed." loading="lazy">
           <p class="caption">Finger mounted on custom modular testbed.</p>
         </div>
         <div class="item">
-          <!-- TODO: Replace placeholder with finger_profile.png when added to static/images -->
-          <img src="static/images/placeholder.png" alt="Finger side profile" loading="lazy">
-          <!-- TODO: Update caption text if desired -->
-          <p class="caption">Side profile view showing tendon-driven architecture.</p>
+          <img src="static/images/finger_profile.jpeg" alt="Finger side profile" loading="lazy">
+          <p class="caption">Side profile view showing resting configuration.</p>
         </div>
         <div class="item">
-          <!-- TODO: Replace placeholder with finger_design_iter.png when added to static/images -->
-          <img src="static/images/placeholder.png" alt="Design iterations of finger" loading="lazy">
-          <!-- TODO: Update caption text if desired -->
+          <img src="static/images/finger_evolution.png" alt="Design iterations of finger" loading="lazy">
           <p class="caption">Design iterations used to improve force and durability.</p>
+        </div>
+        <div class="item">
+          <img src="static/images/double_groove_crossover.png" alt="Double groove crossover" loading="lazy">
+          <p class="caption">Tendon crossover point on double groove pulley.</p>
+        </div>
+        <div class="item">
+          <img src="static/images/fingertip.png" alt="Fingertip" loading="lazy">
+          <p class="caption">Modular fingertip with integrated compliant surface.</p>
+        </div>
+        <div class="item">
+          <img src="static/images/tendon_springs.png" alt="Tendon springs" loading="lazy">
+          <p class="caption">Parallel tensioning springs reduce slack and ease assembly.</p>
+        </div>
+        <div class="item">
+          <img src="static/images/motor_pulleys.jpeg" alt="Motor pulleys" loading="lazy">
+          <p class="caption">Custom motor pulleys for high torque transmission.</p>
+        </div>
+        <div class="item">
+          <img src="static/images/sideways_config.png" alt="Sideways config" loading="lazy">
+          <p class="caption">Alternative finger configuration for testing setup.</p>
+        </div>
+        <div class="item">
+          <img src="static/images/pulley_stands_back_view.jpeg" alt="Pulley stands" loading="lazy">
+          <p class="caption">Additional pulley stands for upright configuration.</p>
         </div>
       </div>
 
@@ -159,14 +177,15 @@
           <ul class="feature-list">
             <li>3-DOF finger with splay and flexion/extension.</li>
             <li>PIP and DIP joints are mechanically coupled with an approximately linear relationship.</li>
-            <li>N+1 actuation: two differential tendons for antagonistic splay and strong flexion, one tendon for MCP flexion and PIP/DIP extension, one tendon for MCP extension.</li>
-            <li>Double-groove pulleys at each joint prevent tendon slacking without idler pulleys.</li>
+            <li>N+1 actuation: two differential tendons for antagonistic splay and strong flexion, one tendon for MCP flexion and PIP/DIP extension, and one tendon for MCP extension.</li>
+            <li>Double-groove pulleys at the joints prevent tendon slacking without tendons rubbing on each other, causing fraying and eventually breaking.</li>
             <li>Parallel tensioning springs reduce slack and simplify assembly.</li>
-            <li>Knot tendon terminations on shafts for compact routing.</li>
+            <li>Figure eight knot tendon terminations on shafts for compact routing.</li>
             <li>Z-stack construction supports faster prototyping, assembly, and part swaps.</li>
-            <li>Custom modular testbed includes finger and motor mounts plus pulley stand.</li>
+            <li>Custom modular testbed includes finger and motor mounts, pulley stands, and 80/20 reinforcements to prevent deflection.</li>
+            <li>High strength finger mount with bolt reinforcement.</li>
             <li>Custom off-axis joint encoders provide absolute position sensing.</li>
-            <li>Many components were manufactured in-house: pulleys, shafts, finger frames, and mounts.</li>
+            <li>Most components were manufactured in-house: pulleys, shafts, finger frames, and mounts.</li>
             <li>Modular fingertip includes compliant contact surface and future tactile sensor mounting support.</li>
           </ul>
         </div>
@@ -193,32 +212,47 @@
         </div>
       </div>
 
-      <div class="media-grid">
+      <div class="media-grid encoder-grid">
         <figure>
-          <!-- TODO: Replace placeholder with finger_closeup.png when added to static/images -->
-          <img src="static/images/placeholder.png" alt="Finger closeup" loading="lazy">
-          <!-- TODO: Update caption text if desired -->
-          <figcaption>Finger closeup</figcaption>
+          <img src="static/images/CAD-iso.png" alt="Finger CAD" loading="lazy">
+          <figcaption>Isometric view of the finger assembly in Onshape.</figcaption>
         </figure>
         <figure>
-          <!-- TODO: Replace placeholder with finger_cad.png when added to static/images -->
-          <img src="static/images/placeholder.png" alt="Finger CAD" loading="lazy">
-          <!-- TODO: Update caption text if desired -->
-          <figcaption>CAD model</figcaption>
+          <img src="static/images/pulleys.png" alt="Pulleys" loading="lazy">
+          <figcaption>Manufactured double-groove pulleys</figcaption>
         </figure>
         <figure>
-          <!-- TODO: Replace placeholder with finger_components.png when added to static/images -->
-          <img src="static/images/placeholder.png" alt="Finger components" loading="lazy">
-          <!-- TODO: Update caption text if desired -->
-          <figcaption>Manufactured components</figcaption>
+          <img src="static/images/CNC.png" alt="CNC phalanx" loading="lazy">
+          <figcaption>CNC-machined proximal phalanx.</figcaption>
         </figure>
         <figure>
-          <!-- TODO: Replace placeholder with cad_exploded.png when added to static/images -->
-          <img src="static/images/placeholder.png" alt="Exploded CAD view" loading="lazy">
-          <!-- TODO: Update caption text if desired -->
-          <figcaption>Exploded assembly view</figcaption>
+          <img src="static/images/finger_closeup.png" alt="Finger closeup" loading="lazy">
+          <figcaption>Finger closeup.</figcaption>
+        </figure>
+        <figure>
+          <img src="static/images/splay_mcp_encoders.jpeg" alt="Off-axis MCP encoders" loading="lazy">
+          <figcaption>Off axis encoders for MCP splay and flexion.</figcaption>
+        </figure>
+        <figure>
+          <img src="static/images/pip_encoder.jpeg" alt="Off-axis PIP encoder" loading="lazy">
+          <figcaption>Off-axis encoder for PIP flexion.</figcaption>
+        </figure>
+        <figure>
+          <img src="static/images/placeholder.png" alt="MCP splay plot" loading="lazy">
+          <figcaption>MCP splay encoder absolute position vs. time for a single range of motion.</figcaption>
+        </figure>
+        <figure>
+          <img src="static/images/placeholder.png" alt="PIP flexion plot" loading="lazy">
+          <figcaption>PIP flexion encoder absolute position vs. time for a single range of motion.</figcaption>
         </figure>
       </div>
+
+      <figure class="single-media">
+        <video controls muted loop playsinline preload="metadata" class="detail-video" aria-label="Spring tensioning video">
+          <source src="static/videos/spring_tension.mp4" type="video/mp4">
+        </video>
+        <figcaption>Hardware demonstration of the parallel spring tensioning mechanism.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -234,7 +268,8 @@
       <ul class="feature-list">
         <li>Full firmware stack for encoder readout and motor driving.</li>
         <li>Torque and current safety limits with soft-start behavior for safer startup.</li>
-        <li>Closed-loop joint feedback controller plus specialized value printing for plotting.</li>
+        <li>Closed-loop joint feedback controller.</li>
+        <li>Specialized value printing for plotting.</li>
         <li>Torque-control mode teleoperation interface.</li>
         <li>Rigorous manual validation performed across all controller types.</li>
       </ul>
@@ -295,7 +330,7 @@
       <ul class="feature-list">
         <li>Onshape assembly parsing into URDF using Blender, for collision and visualization in Drake and rviz2.</li>
         <li>C++ and Eigen control library fingerlib with tendon tension solver, IK, and geometry constants.</li>
-        <li>Drake simulation integrated with ROS2 and simulated motors plus tendons.</li>
+        <li>Drake simulation integrated with ROS2 and simulated motors and tendons.</li>
         <li>Three control modes: joint torque, joint position, and fingertip position.</li>
         <li>ROS2 wrapper nodes for fingerlib functions and visualization.</li>
         <li>Workspace and Jacobian generation scripts for broad joint-state sweeps.</li>
@@ -414,14 +449,14 @@
       <h2 class="section-title">Team Photo and Acknowledgements</h2>
       <figure class="single-media team-photo">
         <!-- TODO: Replace placeholder with team_photo.png when added to static/images -->
-        <img src="static/images/placeholder.png" alt="Robot Design Studio capstone team photo" loading="lazy">
+        <img src="static/images/team_photo.jpeg" alt="Robot Design Studio capstone team photo" loading="lazy">
       </figure>
 
       <!-- TODO: Replace acknowledgements text with your final version -->
       <p>
         Thank you to Dr. Colgate, Raphael, and Sairam Umakanth for their guidance throughout the entire design process. 
-        We also thank shop faculty, guest reviewers, and Tony Shilati for assisting us with designn, manufacturing, and testing out of their own personal time.
-        Lastly, thank you to our peers in RDS for their helpful feedback and support along the way.
+        We also thank shop faculty, guest reviewers, and Tony Shilati, all for assisting us with design, manufacturing, and testing on their personal time.
+        Lastly, thank you to our peers in RDS for their helpful feedback and support along the way!
       </p>
     </div>
   </section>
