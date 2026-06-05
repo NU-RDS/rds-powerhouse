@@ -7,7 +7,6 @@
 
 ## Hardware
 * What were our original specs for all categories?
-* What type of knot?
 * Joint encoder info/design/plots, etc.
 * Machining info
 * Tendon routing diagram
