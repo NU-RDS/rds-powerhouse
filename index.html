@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Robot Design Studio capstone project page for the Powerhouse robotic finger at Northwestern University.">
-  <!-- TODO: Replace with your final author/team attribution -->
   <meta name="author" content="Team Powerhouse | Cole Abbott, Heinrich Asbury, Jared Berry, Evan Bulatek, and Benji Sobeloff-Gittes">
   <title>Robot Design Studio | Powerhouse Finger</title>
 
@@ -31,12 +30,9 @@
   <header class="hero hero-main">
     <div class="hero-body">
       <div class="container is-max-desktop has-text-centered">
-        <!-- TODO: Update course/institution line if needed -->
         <p class="kicker">Northwestern University | MECH_ENG 472</p>
-        <!-- TODO: Update project title if needed -->
         <h1 class="title project-title">Robot Design Studio: Powerhouse Finger</h1>
         <p class="subtitle project-authors">Cole Abbott, Heinrich Asbury, Jared Berry, Evan Bulatek, Benji Sobeloff-Gittes</p>
-        <!-- TODO: Refine hero subtitle copy for final publication -->
         <p class="subtitle project-subtitle">
           A tendon-driven robotic finger optimized for strength and durability while preserving speed, range of motion, and functional dexterity.
         </p>
@@ -46,7 +42,6 @@
 
   <section class="section banner-section">
     <div class="container is-max-desktop">
-      <!-- TODO: Replace banner video if you want a different hero clip -->
       <video class="banner-video" autoplay muted loop playsinline preload="metadata" aria-label="Pencil break demonstration video">
         <source src="static/videos/pencil_break.mp4" type="video/mp4">
       </video>
@@ -56,7 +51,6 @@
   <section class="section">
     <div class="container is-max-desktop">
       <h2 class="section-title">Project Summary</h2>
-      <!-- TODO: Replace with your final summary paragraph(s) -->
       <p>
         Our capstone team designed a 3-DOF robotic finger focusing on high strength and durability, all without sacrificing practical performance. 
         The final system combines antagonistic tendon routing, coupled finger kinematics, custom pulleys and encoders, and a modular testbed to support robust bench testing and iterative prototyping.
@@ -85,7 +79,7 @@
             <tr>
               <td>Maximum Output Force at Fingertip (N)</td>
               <td>40</td>
-              <td>TODO</td>
+              <td>65.6</td>
             </tr>
             <tr>
               <td>Actuation Speed (RPM)</td>
@@ -162,9 +156,7 @@
       </div>
 
       <figure class="single-media">
-        <!-- TODO: Replace placeholder with routing_diagram.png when added to static/images -->
-        <img src="static/images/placeholder.png" alt="Tendon routing diagram" loading="lazy">
-        <!-- TODO: Update caption text if desired -->
+        <img src="static/images/tendon_routing.png" alt="Tendon routing diagram" loading="lazy">
         <figcaption>Tendon routing and coupling architecture.</figcaption>
       </figure>
 
@@ -173,7 +165,6 @@
           <p>
             The hardware stack centers on robust tendon routing and modular construction so we can iterate quickly while maintaining high force output and repeatable performance.
           </p>
-          <!-- TODO: Edit hardware bullet list with your final wording/details -->
           <ul class="feature-list">
             <li>3-DOF finger with splay and flexion/extension.</li>
             <li>PIP and DIP joints are mechanically coupled with an approximately linear relationship.</li>
@@ -199,13 +190,13 @@
                   <th>Value</th>
                 </tr>
               </thead>
-              <!-- TODO: Fill in motor specifications -->
               <tbody>
-                <tr><td>Continuous Torque (Nm)</td><td>TODO</td></tr>
-                <tr><td>Stall Torque (Nm)</td><td>TODO</td></tr>
-                <tr><td>Max Speed (RPM)</td><td>TODO</td></tr>
-                <tr><td>Efficiency</td><td>TODO</td></tr>
-                <tr><td>Operating Voltage (V)</td><td>TODO</td></tr>
+                <tr><td>Reduction</td><td>10:1</td></tr>
+                <tr><td>Continuous Torque (Nm)</td><td>1.3</td></tr>
+                <tr><td>Stall Torque (Nm)</td><td>4.1</td></tr>
+                <tr><td>Max Speed (RPM)</td><td>370</td></tr>
+                <tr><td>Rotor Inertia (gcm²)</td><td>97.35</td></tr>
+                <tr><td>Back-drive Torque (Nm)</td><td>0.06</td></tr>
               </tbody>
             </table>
           </div>
@@ -238,12 +229,12 @@
           <figcaption>Off-axis encoder for PIP flexion.</figcaption>
         </figure>
         <figure>
-          <img src="static/images/placeholder.png" alt="MCP splay plot" loading="lazy">
-          <figcaption>MCP splay encoder absolute position vs. time for a single range of motion.</figcaption>
+          <img src="static/images/mcp_splay_reading.png" alt="MCP splay plot" loading="lazy">
+          <figcaption>MCP splay encoder absolute position vs. time on a sine trajectory.</figcaption>
         </figure>
         <figure>
-          <img src="static/images/placeholder.png" alt="PIP flexion plot" loading="lazy">
-          <figcaption>PIP flexion encoder absolute position vs. time for a single range of motion.</figcaption>
+          <img src="static/images/mcp_flex_reading.png" alt="MCP flexion plot" loading="lazy">
+          <figcaption>MCP flexion encoder absolute position vs. time on a sine trajectory.</figcaption>
         </figure>
       </div>
 
@@ -264,7 +255,6 @@
       <p>
         The firmware and control architecture prioritizes safe torque delivery, reliable sensing, and flexible control interfaces for both bench testing and teleoperation.
       </p>
-      <!-- TODO: Edit firmware/control bullet list with your final wording/details -->
       <ul class="feature-list">
         <li>Full firmware stack for encoder readout and motor driving.</li>
         <li>Torque and current safety limits with soft-start behavior for safer startup.</li>
@@ -276,14 +266,12 @@
 
       <div class="columns is-variable is-4">
         <div class="column">
-          <!-- TODO: Replace video/caption if needed -->
           <video controls muted loop playsinline preload="metadata" class="detail-video" aria-label="Finger bend test video">
             <source src="static/videos/finger_bend.mp4" type="video/mp4">
           </video>
           <p class="caption">Controlled bend sequence under closed-loop operation.</p>
         </div>
         <div class="column">
-          <!-- TODO: Replace video/caption if needed -->
           <video controls muted loop playsinline preload="metadata" class="detail-video" aria-label="Torque teleoperation video">
             <source src="static/videos/torque_teleop.mp4" type="video/mp4">
           </video>
@@ -297,28 +285,24 @@
       </p>
       <div class="carousel simulation-carousel">
         <div class="item">
-          <!-- TODO: Replace video/caption if needed -->
           <video controls muted loop playsinline preload="metadata" aria-label="Catapult demo video">
             <source src="static/videos/demo_catapult.mp4" type="video/mp4">
           </video>
           <p class="caption">Demo 1: Catapult-style high-force release.</p>
         </div>
         <div class="item">
-          <!-- TODO: Replace video/caption if needed -->
           <video controls muted loop playsinline preload="metadata" aria-label="Weight demo video">
             <source src="static/videos/demo_weight.mp4" type="video/mp4">
           </video>
           <p class="caption">Demo 2: Weighted load interaction.</p>
         </div>
         <div class="item">
-          <!-- TODO: Replace video/caption if needed -->
           <video controls muted loop playsinline preload="metadata" aria-label="Tendon tension simulation video">
             <source src="static/videos/demo_tendon_tension.mp4" type="video/mp4">
           </video>
           <p class="caption">Demo 3: Fully simulated tendon tension behavior and force-sharing.</p>
         </div>
         <div class="item">
-          <!-- TODO: Replace video/caption if needed -->
           <video controls muted loop playsinline preload="metadata" aria-label="IK tracking simulation video">
             <source src="static/videos/sim_ik_tracking.mp4" type="video/mp4">
           </video>
@@ -326,7 +310,6 @@
         </div>
       </div>
 
-      <!-- TODO: Edit simulation/software bullet list with your final wording/details -->
       <ul class="feature-list">
         <li>Onshape assembly parsing into URDF using Blender, for collision and visualization in Drake and rviz2.</li>
         <li>C++ and Eigen control library fingerlib with tendon tension solver, IK, and geometry constants.</li>
@@ -339,7 +322,6 @@
       </ul>
 
       <p class="repo-link-wrap">
-        <!-- TODO: Update software repository link if it changes -->
         Software repository:
         <a href="https://github.com/jarmibe7/rds-powerhouse-software" target="_blank" rel="noopener noreferrer">https://github.com/jarmibe7/rds-powerhouse-software</a>
       </p>
@@ -349,7 +331,6 @@
   <section class="section" id="tests">
     <div class="container is-max-desktop">
       <h2 class="section-title">Test Results</h2>
-      <!-- TODO: Update test summary text with your final validation narrative -->
       <p>
         The validation process included impedance response tests, force step tests, and power-focused load tests to verify controller behavior, force capacity, and repeatability against project requirements.
       </p>
@@ -367,10 +348,10 @@
           <!-- TODO: Fill in test specs and results -->
           <tbody>
             <tr>
-              <td>Max. Fingertip Force</td>
+              <td>Max. Fingertip Force (N)</td>
               <td>Apply high forces to the environment.</td>
-              <td>TODO</td>
-              <td>TODO</td>
+              <td>40</td>
+              <td>65.6</td>
             </tr>
             <tr>
               <td>Impedance Characterization</td>
@@ -386,7 +367,7 @@
             </tr>
             <tr>
               <td>Power Test</td>
-              <td>Evaluate sustained high-load operation and thermal limits.</td>
+              <td>Evaluate sustained high-load operation and power output.</td>
               <td>TODO</td>
               <td>TODO</td>
             </tr>
@@ -396,22 +377,18 @@
 
       <div class="media-grid test-grid">
         <figure>
-          <!-- TODO: Replace placeholder with impedance_plots.png when added to static/images -->
-          <img src="static/images/placeholder.png" alt="Impedance plots" loading="lazy">
-          <!-- TODO: Update caption text if desired -->
-          <figcaption>Impedance plots</figcaption>
+          <img src="static/images/impedance_plot.png" alt="Impedance plots" loading="lazy">
+          <figcaption>Impedance characterization test.</figcaption>
         </figure>
         <figure>
-          <!-- TODO: Replace placeholder with force_step.png when added to static/images -->
-          <img src="static/images/placeholder.png" alt="Force step response" loading="lazy">
-          <!-- TODO: Update caption text if desired -->
-          <figcaption>Force step response</figcaption>
+          <img src="static/images/force_step_plot.png" alt="Force step response" loading="lazy">
+          <figcaption>Force step response test.</figcaption>
         </figure>
         <figure>
           <!-- TODO: Replace placeholder with power_test.png when added to static/images -->
           <img src="static/images/placeholder.png" alt="Power test" loading="lazy">
           <!-- TODO: Update caption text if desired -->
-          <figcaption>Power test</figcaption>
+          <figcaption>Test to determine continuous mechanical power output.</figcaption>
         </figure>
       </div>
     </div>
@@ -448,11 +425,9 @@
     <div class="container is-max-desktop">
       <h2 class="section-title">Team Photo and Acknowledgements</h2>
       <figure class="single-media team-photo">
-        <!-- TODO: Replace placeholder with team_photo.png when added to static/images -->
         <img src="static/images/team_photo.jpeg" alt="Robot Design Studio capstone team photo" loading="lazy">
       </figure>
 
-      <!-- TODO: Replace acknowledgements text with your final version -->
       <p>
         Thank you to Dr. Colgate, Raphael, and Sairam Umakanth for their guidance throughout the entire design process. 
         We also thank shop faculty, guest reviewers, and Tony Shilati, all for assisting us with design, manufacturing, and testing on their personal time.
@@ -463,7 +438,6 @@
 
   <footer class="footer">
     <div class="content has-text-centered">
-      <!-- TODO: Update footer text if desired -->
       <p>Robot Design Studio capstone project page.</p>
     </div>
   </footer>
