@@ -159,13 +159,22 @@ p {
   border-radius: var(--radius);
   padding: 0.85rem;
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .carousel .item img,
 .carousel .item video {
   width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: 10px;
   background: #000;
+}
+
+.carousel .item .caption {
+  min-height: 2.7em;
 }
 
 .single-media {
