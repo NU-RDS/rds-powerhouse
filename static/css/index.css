@@ -218,7 +218,8 @@ figcaption {
 }
 
 .lissajous-figure {
-  width: min(100%, 256);
+  width: 100%;
+  max-width: 512px;
   justify-self: center;
 }
 
