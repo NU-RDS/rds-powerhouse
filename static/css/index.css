@@ -217,6 +217,11 @@ figcaption {
   box-shadow: var(--shadow);
 }
 
+.lissajous-figure {
+  width: min(100%, 256);
+  justify-self: center;
+}
+
 .test-grid {
   grid-template-columns: 1fr;
 }

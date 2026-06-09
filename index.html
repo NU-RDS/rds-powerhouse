@@ -102,7 +102,7 @@
             <tr>
               <td>Maximum Output Force at Fingertip (N)</td>
               <td>40</td>
-              <td>101.2</td>
+              <td>103.6</td>
             </tr>
             <tr>
               <td>Actuation Speed (RPM)</td>
@@ -358,41 +358,88 @@
         The validation process included impedance response tests, force step tests, and power-focused load tests to verify controller behavior, force capacity, and repeatability against project requirements.
       </p>
 
+      <ul class="feature-list test-description-list">
+        <li>In the max fingertip force test, the force is gradually increased until the finger fails.</li>
+        <li>In the impedance test, a dynamometer applies a chirp signal of increasing frequency to the fingertip while the finger commands zero torque, and the resulting force and position data are used to estimate impedance characteristics.</li>
+        <li>In the position step test, the finger is commanded to oscillate between two positions that are 10 mm apart at 1 Hz, and the steady state error, overshoot, and settling time are calculated across all step responses.</li>
+        <li>In the Lissajous trajectory test, the finger is commanded to follow a Lissajous curve in the XY plane at 0.25 Hz, and the integrated position error is calculated across the trajectory.</li>
+        <li>In the power test, the finger is commanded in a force step trajectory while the fingertip is attached to a load cell, spring, and damper in series.. Using the fingertip position data from computer vision and the force data from the load cell, the mechanical power can be calculated.</li>
+      </ul>
+
+      <p>
+        The finger generally performed very well in tests of strength and basic position control, with the max fingertip force far exceeding our design goal and the position step response showing minimal steady state error and settling time. 
+        It struggled in the Lissajous trajectory test, which we attribute to a combination of unmodeled dynamics/friction, improper control tuning, and some tendon slack that caused delayed tension delivery. 
+        The differential tendon design was a major contributor to the high force output, but it also made the system very sensitive to tuning. 
+        The additional noise of the custom encoders also made it difficult to add any derivative gains to the system.
+      </p>
+
+      <p>
+        The power output test also had some issues, particularly with the velocity data. We used computer vision to record fingertip position during
+        the test, with the intention of using a finite difference method to calculate instantaneous velocity along the recorded trajectory. However, the finger
+        often moved too quickly for the camera to capture a smooth trajectory, which made the velocity and therefore power calculations very noisy. 
+        Despite this, general trends are still present. The power output (negative) increases in magnitude when the force and velocity increase (finger presses down).
+        It also approaches zero when the releases the damper, sometimes even becoming positive. It is possible the positive power is caused by the spring pressing up against the finger when
+        the downward force is released. We also were not able to reach the maximum fingertip speed while constraining the finger in the power output testing setup,
+        meaning the power output is potentiall much lower than the maximum possible. 
+        Overall, we are very happy with the performance of the finger, particularly in terms of strength and repeatability, 
+        but there are still many opportunities for improvement in control and sensing to enable better performance in dynamic tasks.
+      </p>
+
       <div class="table-wrapper">
         <table class="table is-fullwidth is-striped spec-table">
           <thead>
             <tr>
               <th>Test Name</th>
               <th>Test Goal</th>
-              <th>Spec</th>
               <th>Result</th>
             </tr>
           </thead>
           <!-- TODO: Fill in test specs and results -->
           <tbody>
             <tr>
-              <td>Max. Fingertip Force (N)</td>
+              <td>Max. Fingertip Force</td>
               <td>Apply high forces to the environment.</td>
-              <td>40</td>
-              <td>101.2</td>
+              <td>103.6 N</td>
             </tr>
             <tr>
-              <td>Impedance Characterization</td>
-              <td>Validate stable compliant behavior across commanded settings.</td>
-              <td>TODO</td>
-              <td>TODO</td>
+              <td>Force Step Response - Low Magnitude (2 N Amp.)</td>
+              <td>Determine the force response under low load conditions.</td>
+              <td>See plot below.</td>
             </tr>
             <tr>
-              <td>Force Step Response</td>
-              <td>Measure settling time and overshoot under force step commands.</td>
-              <td>TODO</td>
-              <td>TODO</td>
+              <td>Force Step Response - High Magnitude (10 N Amp.)</td>
+              <td>Determine the force response under high load conditions.</td>
+              <td>See plot below.</td>
+            </tr>
+            <tr>
+              <td>Finger Impedance Test</td>
+              <td>Determine the impedance characteristics of the finger.</td>
+              <td>See plot below.</td>
+            </tr>
+            <tr>
+              <td>Position Step Response - Steady State Error</td>
+              <td>Measure the average steady state error under position step commands.</td>
+              <td>1.12 mm</td>
+            </tr>
+            <tr>
+              <td>Position Step Response - Overshoot</td>
+              <td>Measure the average overshoot under position step commands.</td>
+              <td>19.36%</td>
+            </tr>
+            <tr>
+              <td>Position Step Response - Average Settling Time</td>
+              <td>Measure the average 5% settling time per step under position step commands.</td>
+              <td>0.0333 s</td>
+            </tr>
+            <tr>
+              <td>Lissajous Trajectory Response - Integrated Error</td>
+              <td>Measure the integrated error under while the fingertip follows a Lissajous trajectory.</td>
+              <td>61.4320 mm*s</td>
             </tr>
             <tr>
               <td>Power Test</td>
-              <td>Evaluate sustained high-load operation and power output.</td>
-              <td>TODO</td>
-              <td>TODO</td>
+              <td>Evaluate sustained high-load operation with average mechanical power output.</td>
+              <td>0.7297 W</td>
             </tr>
           </tbody>
         </table>
@@ -400,17 +447,31 @@
 
       <div class="media-grid test-grid">
         <figure>
+          <img src="static/images/max_force_plot.png" alt="Max force plot" loading="lazy">
+          <figcaption>Fingertip output force is gradually increased until failure in the max force test.</figcaption>
+        </figure>
+        <figure>
+          <img src="static/images/force_step_low_amp.png" alt="Force step response low" loading="lazy">
+          <figcaption>Force step response at low amplitude.</figcaption>
+        </figure>
+        <figure>
+          <img src="static/images/force_step_high_amp.png" alt="Force step response high" loading="lazy">
+          <figcaption>Force step response at high amplitude.</figcaption>
+        </figure>
+        <figure>
           <img src="static/images/impedance_plot.png" alt="Impedance plots" loading="lazy">
           <figcaption>Impedance characterization test.</figcaption>
         </figure>
         <figure>
-          <img src="static/images/force_step_plot.png" alt="Force step response" loading="lazy">
-          <figcaption>Force step response test.</figcaption>
+          <img src="static/images/step_response.png" alt="Position step response" loading="lazy">
+          <figcaption>Position step response test, averaged for each step.</figcaption>
+        </figure>
+        <figure class="lissajous-figure">
+          <img src="static/images/lissajous_demo.png" alt="Lissajous trajectory response" loading="lazy">
+          <figcaption>Lissajous trajectory following test.</figcaption>
         </figure>
         <figure>
-          <!-- TODO: Replace placeholder with power_test.png when added to static/images -->
-          <img src="static/images/placeholder.png" alt="Power test" loading="lazy">
-          <!-- TODO: Update caption text if desired -->
+          <img src="static/images/power_test.png" alt="Power test" loading="lazy">
           <figcaption>Test to determine continuous mechanical power output.</figcaption>
         </figure>
       </div>
@@ -425,19 +486,56 @@
           <thead>
             <tr>
               <th>Item</th>
-              <th>Category</th>
               <th>Qty</th>
               <th>Unit Cost (USD)</th>
               <th>Total Cost (USD)</th>
-              <th>Supplier / Notes</th>
+              <th>Type</th>
+              <th>Description</th>
             </tr>
           </thead>
-          <!-- TODO: Fill in BOM items, quantities, and costs -->
           <tbody>
-            <tr><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
-            <tr><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
-            <tr><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
-            <tr><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
+            <tr><td>10x19x5 mm Steel Ball Bearing</td><td>2</td><td>$7.20</td><td>$14.40</td><td>Stock Component</td><td>PIP, DIP Bearing</td></tr>
+            <tr><td>10x15x3 mm Steel Ball Bearing</td><td>10</td><td>$11.66</td><td>$116.60</td><td>Stock Component</td><td>Pulley and universal bearing</td></tr>
+            <tr><td>10x12x0.5 Shim</td><td>14</td><td>$11.97</td><td>$23.94</td><td>Stock Component</td><td>Shims for Pulleys (2x variety pack)</td></tr>
+            <tr><td>Hex socket head cap screw M3x0.50 x 18</td><td>3</td><td>$0.0</td><td>$15.26</td><td>Stock Component</td><td>Member 1 Bolts, 100 Pack</td></tr>
+            <tr><td>Hall Sensor PCB</td><td>3</td><td>$2.21</td><td>$6.63</td><td>Stock Component</td><td>N/A</td></tr>
+            <tr><td>3x7x3 mm Stainless Steel Ball Bearing</td><td>4</td><td>$8.26</td><td>$33.04</td><td>Stock Component</td><td>Linkage Bearing</td></tr>
+            <tr><td>3mm ID 5mm OD x 0.5mm Washer</td><td>8</td><td>$0.0</td><td>$5.99</td><td>Stock Component</td><td>Linkage Washer</td></tr>
+            <tr><td>Ultra-Low-Profile Precision Shoulder Screw</td><td>4</td><td>$4.22</td><td>$16.88</td><td>Stock Component</td><td>N/A</td></tr>
+            <tr><td>M3x20 Bolt</td><td>2</td><td>$0.0</td><td>$14.47</td><td>Stock Component</td><td>100 Pack</td></tr>
+            <tr><td>3mm Shoulder Bolt</td><td>1</td><td>$8.68</td><td>$8.68</td><td>Stock Component</td><td>N/A</td></tr>
+            <tr><td>Hex socket head cap screw M3x0.50 x 4</td><td>2</td><td>$0.0</td><td>$13.80</td><td>Stock Component</td><td>100 Pack</td></tr>
+            <tr><td>Hex socket head cap screw M2x0.40 x 5</td><td>2</td><td>$0.0</td><td>$18.48</td><td>Stock Component</td><td>100 Pack</td></tr>
+            <tr><td>Neodymium Magnet</td><td>3</td><td>$0.81</td><td>$2.43</td><td>Stock Component</td><td>N/A</td></tr>
+            <tr><td>Cubemars Motors</td><td>4</td><td>$185.00</td><td>$740.00</td><td>Stock Component</td><td>N/A</td></tr>
+            <tr><td>Tendon Material</td><td>1</td><td>$18.99</td><td>$18.99</td><td>Stock Component</td><td>N/A</td></tr>
+            <tr><td>Multipurpose Aluminum Stock</td><td>1</td><td>$50.00</td><td>$50.00</td><td>Stock Component</td><td>Bar stock for custom parts</td></tr>
+            <tr><td>Aluminum Baseplate</td><td>1</td><td>$141.23</td><td>$141.23</td><td>Stock Component</td><td>Baseplate for finger mounting</td></tr>
+            <tr><td>0603 (1608 metric) Multilayer Ceramic Capacitors</td><td>2</td><td>$0.0</td><td>$0.0</td><td>Stock Component</td><td>In House</td></tr>
+            <tr><td>10x12x0.2 Shim</td><td>4</td><td>$0.0</td><td>$0.0</td><td>Stock Component</td><td>In House</td></tr>
+            <tr><td>10x12x0.1 Shim</td><td>2</td><td>$0.0</td><td>$0.0</td><td>Stock Component</td><td>In House</td></tr>
+            <tr><td>Member 2</td><td>1</td><td>$0.0</td><td>$0.0</td><td>Mill</td><td>In House</td></tr>
+            <tr><td>Linkage</td><td>2</td><td>$0.0</td><td>$0.0</td><td>Mill</td><td>In House</td></tr>
+            <tr><td>Member 3 Right</td><td>1</td><td>$0.0</td><td>$0.0</td><td>Mill</td><td>In House</td></tr>
+            <tr><td>Member 3 Left</td><td>1</td><td>$0.0</td><td>$0.0</td><td>Mill</td><td>In House</td></tr>
+            <tr><td>Universal Plate</td><td>1</td><td>$0.0</td><td>$0.0</td><td>Mill</td><td>In House</td></tr>
+            <tr><td>Universal Body</td><td>1</td><td>$0.0</td><td>$0.0</td><td>Mill</td><td>In House</td></tr>
+            <tr><td>Base</td><td>1</td><td>$0.0</td><td>$0.0</td><td>Mill</td><td>In House</td></tr>
+            <tr><td>DIP Shaft</td><td>1</td><td>$0.0</td><td>$0.0</td><td>Lathe</td><td>In House</td></tr>
+            <tr><td>PIP Shaft</td><td>1</td><td>$0.0</td><td>$0.0</td><td>Lathe</td><td>In House</td></tr>
+            <tr><td>MCP Shaft</td><td>1</td><td>$0.0</td><td>$0.0</td><td>Lathe</td><td>In House</td></tr>
+            <tr><td>22mm 1 Grove Pulley</td><td>1</td><td>$0.0</td><td>$0.0</td><td>Lathe</td><td>In House</td></tr>
+            <tr><td>22mm 10mm Double Grove Pulley</td><td>1</td><td>$0.0</td><td>$0.0</td><td>Lathe</td><td>In House</td></tr>
+            <tr><td>22mm Double Grove Pulley</td><td>2</td><td>$0.0</td><td>$0.0</td><td>Lathe</td><td>In House</td></tr>
+            <tr><td>22mm Triple Grove Pulley</td><td>1</td><td>$0.0</td><td>$0.0</td><td>Lathe</td><td>In House</td></tr>
+            <tr><td>28mm Double Grove Pulley</td><td>3</td><td>$0.0</td><td>$0.0</td><td>Lathe</td><td>In House</td></tr>
+            <tr><td>28 mm Single Grove Pulley</td><td>1</td><td>$0.0</td><td>$0.0</td><td>Lathe</td><td>In House</td></tr>
+            <tr><td>Member 1 Spacer</td><td>3</td><td>$0.0</td><td>$0.0</td><td>Lathe</td><td>In House</td></tr>
+            <tr><td>Universal Spacer</td><td>2</td><td>$0.0</td><td>$0.0</td><td>Lathe</td><td>In House</td></tr>
+            <tr><td>Member 1 Right</td><td>1</td><td>$0.0</td><td>$0.0</td><td>CNC</td><td>In House</td></tr>
+            <tr><td>Member 1 Left</td><td>1</td><td>$0.0</td><td>$0.0</td><td>CNC</td><td>In House</td></tr>
+            <tr><td>PIP Encoder Mount</td><td>1</td><td>$0.0</td><td>$0.0</td><td>3D Print</td><td>In House</td></tr>
+            <tr><td>Fingertip</td><td>1</td><td>$0.0</td><td>$0.0</td><td>3D Print</td><td>In House</td></tr>
           </tbody>
         </table>
       </div>
